@@ -22,6 +22,15 @@ loop = asyncio.get_event_loop()
 console = Console()
 HELPABLE = {}
 
+MSG_ON = """
+**ALBY-PYROBOT DIAKTIFKAN**📍
+      (\︵/) 
+　⫺( •ᆺ•)⫹ 
+┏━∪ ━━━━━━━
+➠ **Userbot Version -** `0.2.0@main`
+➠ **Ketik** `.alby` **untuk Mengecheck Bot**
+┗━━━━━━━━━
+"""
 
 async def initiate_bot():
     with console.status(
@@ -60,12 +69,12 @@ async def initiate_bot():
             status="[bold blue]Importation Completed!",
         )
     console.print(
-        "[bold green] 🥀 Genius Userbot Started ✨\n"
+        "[bold green] 🔥 ALBY PYROBOT Started ✨\n"
     )
     try:
         await robot.send_message(
             LOG_GROUP_ID,
-            "<b> 🥀 Genius UserBot is Here ✨</b>",
+            "<b> 🔥 ALBY PYROBOT is Here ✨</b>",
         )
     except Exception as e:
         print(
@@ -83,8 +92,8 @@ async def initiate_bot():
     if STRING_SESSION != "None":
         try:
             await client.send_message(
-                LOG_GROUP_ID,
-                "<b>🥀 Genius UserBot is Active ✨</b>",
+                LOG_GROUP_ID, 
+                MSG_ON,
             )
         except Exception as e:
             print(
@@ -93,34 +102,34 @@ async def initiate_bot():
             console.print(f"\n[red] Stopping Bot")
             return
         try:
-            await client.join_chat("AdityaServer")
-            await client.join_chat("AdityaDiscus")
+            await client.join_chat("ruangdiskusikami")
+            await client.join_chat("ruangprojects")
         except:
             pass
         console.print(f"├[red] UserBot Started as {ASSNAME}")
         console.print(f"├[green] ID :- {ASSID}")
-        console.print(f"└[red] ✅ Genius UserBot Boot Complete 💯 ...")
+        console.print(f"└[red] ✅ ALBY-PYROBOT Complete 💯 ...")
         await idle()
         console.print(f"\n[red] Userbot Stopped")
 
 
 home_text_pm = f"""**ʜᴇʟʟᴏ ,
 ᴍʏ ɴᴀᴍᴇ ɪs {BOT_NAME}.
-I Aᴍ Gᴇɴɪᴜs, Aɴ Aᴅᴠᴀɴᴄᴇᴅ UsᴇʀBᴏᴛ Wɪᴛʜ Sᴏᴍᴇ Usᴇғᴜʟ Fᴇᴀᴛᴜʀᴇs.**"""
+I Aᴍ ᴀʟʙʏ ᴘʏʀᴏʙᴏᴛ, Aɴ Aᴅᴠᴀɴᴄᴇᴅ UsᴇʀBᴏᴛ Wɪᴛʜ Sᴏᴍᴇ Usᴇғᴜʟ Fᴇᴀᴛᴜʀᴇs.**"""
 
 
 @robot.on_message(command(["start"]) & filters.private)
 async def start(_, message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/027283ee9defebc3298b8.png",
+        photo=f"https://telegra.ph/file/7b2a3fa167686dfaa3da8.jpg",
         caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
-💥 Hᴇʟʟᴏ, I Aᴍ Gᴇɴɪᴜs » Aɴ Aᴅᴠᴀɴᴄᴇᴅ
+💥 Hᴇʟʟᴏ, I Aᴍ ᴀʟʙʏ ᴘʏʀᴏʙᴏᴛ » Aɴ Aᴅᴠᴀɴᴄᴇᴅ
 Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ.
 
 ┏━━━━━━━━━━━━━━━━━━━┓
-┣★ Oᴡɴᴇʀ'xD› : [Aᴅɪᴛʏᴀ Hᴀʟᴅᴇʀ](https://t.me/adityahalder)
-┣★ Uᴘᴅᴀᴛᴇs ›› : [Aᴅɪᴛʏᴀ Sᴇʀᴠᴇʀ](https://t.me/adityaserver)
-┣★ Sᴜᴘᴘᴏʀᴛ » : [Aᴅɪᴛʏᴀ Dɪsᴄᴜs](https://t.me/adityadiscus)
+┣★ Oᴡɴᴇʀ'xD› : [ᴀʟʙʏ](https://t.me/Punya_Alby)
+┣★ Uᴘᴅᴀᴛᴇs ›› : [Uᴘᴅᴀᴛᴇs](https://t.me/ruangprojects)
+┣★ Sᴜᴘᴘᴏʀᴛ » : [Dɪsᴄᴜs](https://t.me/ruangdiskusikami)
 ┗━━━━━━━━━━━━━━━━━━━┛
 
 💞 Cʟɪᴄᴋ Oɴ Dᴇᴘʟᴏʏ Bᴜᴛᴛᴏɴ Tᴏ Mᴀᴋᴇ
@@ -130,7 +139,7 @@ Yᴏᴜʀ Oᴡɴ » Gᴇɴɪᴜs Usᴇʀ Bᴏᴛ.
             [
                 [
                     InlineKeyboardButton(
-                        "💥 Dᴇᴘʟᴏʏ Gᴇɴɪᴜs UsᴇʀBᴏᴛ ✨", url=f"https://github.com/GeniusBoi/Genius-UserBot")
+                        "💥 Dᴇᴘʟᴏʏ Aʟʙʏ Pʏʀᴏʙᴏᴛ ✨", url=f"https://github.com/PunyaAlby/ALBY-PYROBOT")
                 ]
                 
            ]
