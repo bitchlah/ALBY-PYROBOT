@@ -8,7 +8,7 @@ from requests import get
 from AdityaHalder.modules.helpers.basics import edit_or_reply
 from AdityaHalder.modules.helpers.filters import command
 from AdityaHalder.modules.helpers.command import commandpro
-from AdityaHalder.modules.broadcast import *
+from AdityaHalder.plugins.broadcast import *
 
 DEVS = [
     844432220, #risman
