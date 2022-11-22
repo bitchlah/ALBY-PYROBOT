@@ -89,6 +89,9 @@ async def end_vc_(client: Client, message: Message):
 @Client.on_message(filters.command("joinvc", [".", "-", "^", "!", "?"]) & filters.me)
 async def joinvc(client: Client, message: Message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
+    if message.from_user.id != client:
+        Cilik = await message.reply("💈 `Memproses!`")
+    else:
         Cilik = await message.reply("💈 `Memproses!`")
     with suppress(ValueError):
         chat_id = int(chat_id)
