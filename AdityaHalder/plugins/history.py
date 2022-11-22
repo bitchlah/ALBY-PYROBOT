@@ -38,7 +38,7 @@ async def sg(client: Client, message: Message):
 
 
 
-__MODULE__ = "Hɪsᴛᴏʀʏ"
+__MODULE__ = "SangMata"
 __HELP__ = f"""
 **🥀 Gᴇᴛ Nᴀᴍᴇ & Usᴇʀɴᴀᴍᴇ Hɪsᴛᴏʀʏ Oғ Aɴʏ Usᴇʀ ✨**
 
