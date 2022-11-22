@@ -32,7 +32,7 @@ commands = {
 }
 
 
-@Client.on_message(filters.command(list(commands)) & filters.me)
+@Client.on_message(command(list(commands)) & filters.me)
 async def fakeactions_handler(client: Client, message: Message):
     cmd = message.command[0]
     try:
