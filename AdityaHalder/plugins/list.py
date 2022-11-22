@@ -80,20 +80,6 @@ async def stats(client: Client, message: Message):
             u, g, sg, c, a_chat, b, ms
         )
     )
-
-
-
-add_command_help(
-    "",
-    [
-    ],
-)
-
-add_command_help(
-    "",
-    [
-    ],
-)
     
 __MODULE__ = "limit"
 __HELP__ = f"""
