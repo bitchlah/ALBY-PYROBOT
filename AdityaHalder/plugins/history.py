@@ -11,9 +11,9 @@ from AdityaHalder.utilities.misc import SUDOERS
 
 
 
-@Client.on_message(command(["history"]) & SUDOERS)
-async def user_history(client: Client, message: Message):
-    lol = await edit_or_reply(message, "Processing please wait")
+@Client.on_message(filters.command(["sg", "sa", "sangmata"], [".", "-", "^", "!", "?"]) & SUDOERS & filters.me)
+async def sg(client: Client, message: Message):
+    lol = await message.reply("💈 `Harap Tunggu..`")
     if not message.reply_to_message:
         await lol.edit("reply to any message")
     reply = message.reply_to_message
@@ -30,7 +30,7 @@ async def user_history(client: Client, message: Message):
     async for opt in client.iter_history("@SangMataInfo_bot", limit=3):
         hmm = opt.text
         if hmm.startswith("Forward"):
-            await lol.edit("Can you kindly disable your privacy settings for good")
+            await lol.edit("Bisakah Anda menonaktifkan pengaturan privasi Anda untuk selamanya?")
             return
         else:
             await lol.delete()
