@@ -90,6 +90,11 @@ async def end_vc_(client: Client, message: Message):
 async def joinvc(client: Client, message: Message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
         chat_id = int(chat_id)
+    if message.from_user.id != mee.id:
+        Cilik = await message.reply("💈 `Memproses!`")
+    else:
+        Cilik = await message.reply("💈 `Memproses!`")
+    with suppress(ValueError):
     try:
         await client.group_call.start(chat_id)
     except Exception as e:
